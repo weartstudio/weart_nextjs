@@ -4,8 +4,8 @@ export default function Header({children}) {
 	return (
 		<section className='bg-weart-800 relative '>
       <div className="container mx-auto px-2">
-        <div className="grid lg:grid-cols-2 py-28 min-h-[650px] items-center">
-          <div className='text-white'>
+        <div className="grid lg:grid-cols-2 md:pb-28 pt-28 pb-2 min-h-[650px] items-center">
+          <div className='text-white py-5'>
             {children}
           </div>
           <div className='lg:absolute inset-y-0 right-0 w-1/2 max-w-3xl opacity-30'>

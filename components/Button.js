@@ -5,7 +5,7 @@ export default function Button({children, href, className}) {
 			py-4 px-8 rounded-sm
 			text-white tracking-wider
 			font-display
-			inline-block ${className}`}
+			inline-flex items-center gap-3 hover:gap-5 transition-all ${className}`}
 			>
 			{children}
 		</a>
