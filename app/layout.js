@@ -1,5 +1,17 @@
 import './globals.css'
 import Nav from '@/components/Nav'
+import { Poppins, Source_Code_Pro } from 'next/font/google'
+
+const poppins = Poppins({
+  variable: "--display-font",
+  weight: ['400','600'],
+  subsets: ['latin']
+})
+const sourceCodePro = Source_Code_Pro({
+  // weight: ['400','600'],
+  variable: "--body-font",
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${poppins.variable} ${sourceCodePro.className}`}>
         <Nav />
         {children}
       </body>
