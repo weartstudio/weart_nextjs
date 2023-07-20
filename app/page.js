@@ -6,6 +6,9 @@ import { BsStarFill, BsArrowRight } from "react-icons/bs";
 export default function Home() {
   return (
     <>
+    <header>
+      <title>Weart.hu - Egyed Balázs Web és WordPress fejlesztő</title>
+    </header>
 
     <Header>
 
@@ -33,7 +36,9 @@ export default function Home() {
 
     <section>
       <div className="container mx-auto px-2 grid">
+        <div className="grid md:grid-cols-2">
 
+        </div>
       </div>
     </section>
 
