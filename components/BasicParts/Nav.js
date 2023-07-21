@@ -22,8 +22,9 @@ export default function Nav() {
 							bg-white
 							text-gray-600
 							absolute inset-x-0 top-full z-10
+							flex flex-col gap-4
 							shadow-md
-							md:py-0 md:relative	md:flex	md:shadow-none
+							md:py-0 md:relative	md:flex-row	md:shadow-none md:gap-0
 						`}>
 						<NavItem href="#">Miben segítek?</NavItem>
 						<NavItem href="#">Magamról</NavItem>
