@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Button from '@/components/Button'
+import Button from '@/components/BasicParts/Button'
 import Header from '@/components/Blocks/Header'
 import IconsTwoColumns from '@/components/Blocks/IconsTwoColumns';
 
@@ -19,7 +19,26 @@ export default function Home() {
       stars: '90+ sikeres projekt'
     }} />
 
-    <IconsTwoColumns></IconsTwoColumns>
+    <IconsTwoColumns data={{
+      subtitle: 'Szolgáltatások',
+      title: 'Miben tudok segíteni?',
+      columns: [
+        {
+          icon: 'fa-brands fa-wordpress-simple',
+          title: 'Weboldal készítés',
+          desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis, numquam qui reprehenderit aliquid rerum dolorem, dicta nobis, odio voluptates necessitatibus reiciendis. Nostrum molestias obcaecati distinctio, hic ea consequatur dolores.',
+          link: 'Tovább',
+          linkUrl: '#'
+        },
+        {
+          icon: 'fa-brands fa-react',
+          title: 'Frontend fejlesztés',
+          desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis, numquam qui reprehenderit aliquid rerum dolorem, dicta nobis, odio voluptates necessitatibus reiciendis. Nostrum molestias obcaecati distinctio, hic ea consequatur dolores.',
+          link: 'Tovább',
+          linkUrl: '#'
+        },
+      ]
+    }} />
 
 
 

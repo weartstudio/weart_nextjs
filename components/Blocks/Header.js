@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Button from '../Button'
-import { BsStarFill, BsArrowRight } from "react-icons/bs";
+import Button from '../BasicParts/Button'
 
 
 export default function Header({data}) {
@@ -20,13 +19,13 @@ export default function Header({data}) {
 
             <div className="flex flex-col sm:flex-row gap-5 md:items-center items-start">
 
-              <Button href={data.btnUrl} className={'flex-initial'}>{data.btn} <BsArrowRight/></Button>
+              <Button href={data.btnUrl} className={'flex-initial'}>{data.btn} <i class="fa-solid fa-arrow-right"></i></Button>
 
               { data.stars ?
                 <div className='text-sm opacity-70 mb-1'>
                   <p className='mb-1'>{data.stars}</p>
                   <div className='flex gap-1'>
-                    {[...Array(5)].map((x, i) => <BsStarFill className='text-yellow-200' key={i} /> )}
+                    {[...Array(5)].map((x, i) => <i class="fa-solid fa-star text-yellow-200" key={i}></i> )}
                   </div>
                 </div>
                 : '' }
