@@ -1,8 +1,13 @@
+'use client'
+
+
 import Image from 'next/image'
 import Button from '../BasicParts/Button'
+import { useEffect } from 'react'
 
 
 export default function Header({data}) {
+  useEffect(()=>{console.log(data)},[data])
 	return (
 		<section className='bg-weart-800 relative '>
       <div className="container mx-auto px-2">
@@ -19,13 +24,13 @@ export default function Header({data}) {
 
             <div className="flex flex-col sm:flex-row gap-5 md:items-center items-start">
 
-              <Button href={data.btnUrl} className={'flex-initial'}>{data.btn} <i class="fa-solid fa-arrow-right"></i></Button>
+              <Button href={data.link.url} className={'flex-initial'}>{data.link.title} <i className="fa-solid fa-arrow-right"></i></Button>
 
               { data.stars ?
                 <div className='text-sm opacity-70 mb-1'>
                   <p className='mb-1'>{data.stars}</p>
                   <div className='flex gap-1'>
-                    {[...Array(5)].map((x, i) => <i class="fa-solid fa-star text-yellow-200" key={i}></i> )}
+                    {[...Array(5)].map((x, i) => <i className="fa-solid fa-star text-yellow-200" key={i}></i> )}
                   </div>
                 </div>
                 : '' }

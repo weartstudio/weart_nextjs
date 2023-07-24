@@ -13,10 +13,10 @@ export default function Nav() {
 	return (
 		<nav className="w-full px-2 py-4 border-b-2 border-weart-100 relative">
 			<div className="container mx-auto flex flex-wrap items-center justify-between text-white">
-				<div className="logo"><Link href="/"><Image src="/logo.png" width={99} height={35} /></Link></div>
+				<div className="logo"><Link href="/"><Image src="/logo.png" width={99} height={35} alt='' /></Link></div>
 				<div className="menu">
 					<button className="block md:hidden text-2xl text-black" onClick={()=>{ setMenu( menu !== 'hidden' ? 'hidden' : '' )}}>
-						{menu !== 'hidden' ? <i class="fa-solid fa-xmark"></i> :	<i class="fa-solid fa-bars"></i>	}
+						{menu !== 'hidden' ? <i className="fa-solid fa-xmark"></i> :	<i className="fa-solid fa-bars"></i>	}
 					</button>
 					<ul className={`py-2 text-center ${menu}
 							bg-white
