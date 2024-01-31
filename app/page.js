@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import Button from '@/components/BasicParts/Button'
-import Header from '@/components/Blocks/Header'
-import IconsTwoColumns from '@/components/Blocks/IconsTwoColumns';
+import Hero from '@/components/Blocks/Hero'
+import Technologies from '@/components/Blocks/Technologies';
+import About from '@/components/Blocks/About';
+import Portfolio from '@/components/Blocks/Portfolio';
+import Contact from '@/components/Blocks/Contact';
 
 export default async function Home() {
 
@@ -23,44 +26,45 @@ export default async function Home() {
       <title>Weart.hu - Egyed Balázs Web és WordPress fejlesztő</title>
     </header>
 
-    {data.acf.blocks.map(block => {
-      switch ( block.acf_fc_layout ){
-        case 'hero': return <Header data={block} />;
-        case 'iconsblock': return <IconsTwoColumns data={block} />;
-        default: ''; break;
-      }
-    })}
-
-    {/* <Header data={{
-      subtitle: `weboldal készítés`,
+    <Hero data={{
+      subtitle: `Front-End fejlesztő`,
       title: `Ne nézelődj tovább, ha tapasztalt <span>webfejlesztő</span>t keresel!`,
       desc: 'Egyed Balázs vagyok, több mint 8 éves tapasztalattal rendelkező Frontend és WordPress fejlesztő. Egyedi, személyre szabott weboldalak, webáruházak fejlesztésével foglalkozom, ezért kívül-belül ismerem a React, WooCommerce és a WordPress rendszereket.',
-      btn: 'Beszélgessünk',
-      btnUrl: '#',
-      stars: '90+ sikeres projekt'
-    }} /> */}
+      link: {
+        url: '#',
+        title: 'Beszélgessünk'
+      },
+      stars: '8+ év tapasztalat'
+    }} />
 
-    {/* <IconsTwoColumns data={{
-      subtitle: 'Szolgáltatások',
+    <Technologies data={{
+      subtitle: 'Technológiák',
       title: 'Miben tudok segíteni?',
-      columns: [
+      blocks: [
         {
           icon: 'fa-brands fa-wordpress-simple',
-          title: 'Weboldal készítés',
+          title: 'WordPress fejlesztés',
           desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis, numquam qui reprehenderit aliquid rerum dolorem, dicta nobis, odio voluptates necessitatibus reiciendis. Nostrum molestias obcaecati distinctio, hic ea consequatur dolores.',
-          link: 'Tovább',
-          linkUrl: '#'
+          link: {
+            url: '#',
+            title: 'Tovább'
+          }
         },
         {
           icon: 'fa-brands fa-react',
-          title: 'Frontend fejlesztés',
+          title: 'JavaScript és sitebuild fejlesztés',
           desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis, numquam qui reprehenderit aliquid rerum dolorem, dicta nobis, odio voluptates necessitatibus reiciendis. Nostrum molestias obcaecati distinctio, hic ea consequatur dolores.',
-          link: 'Tovább',
-          linkUrl: '#'
-        },
+          link: {
+            url: '#',
+            title: 'Tovább'
+          }
+        }
       ]
-    }} /> */}
+    }} />
 
+    <About />
+    <Portfolio />
+    <Contact />
 
 
     </>
